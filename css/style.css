@@ -1,0 +1,553 @@
+/* --- Reset Geral --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+    background-color: #0b090a;
+    color: #f5f3f4;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* --- Header / Hero --- */
+header {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(180deg, #161a1d 0%, #0b090a 100%);
+    border-bottom: 2px solid #df9232; /* Amarelo Alaranjado Dourado */
+}
+
+.header-content {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUpHeader 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.author-tag {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #df9232; /* Dourado */
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+}
+
+h1 {
+    font-size: 38px;
+    color: #f5f3f4;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.highlight {
+    color: #df9232; /* Dourado */
+}
+
+.subtitle {
+    font-size: 18px;
+    color: #b1a7a6;
+    max-width: 700px;
+    margin: 0 auto 35px auto;
+}
+
+/* --- Botão Principal (CTA) --- */
+.cta-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #df9232 0%, #bd731b 100%); /* Gradiente Alaranjado Dourado */
+    color: #050505; /* Texto escuro para melhor contraste */
+    padding: 16px 40px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(223, 146, 50, 0.3);
+    transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease;
+    margin-top: 15px;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(223, 146, 50, 0.5);
+}
+
+/* --- Estrutura de Secções --- */
+section {
+    padding: 70px 0;
+    border-bottom: 1px solid #1a1a1a;
+}
+
+.section-title {
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #f5f3f4;
+    margin-bottom: 30px;
+    text-align: center;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #df9232;
+    margin: 10px auto 0 auto;
+}
+
+/* --- Listas Dinâmicas --- */
+.bullet-list {
+    list-style: none;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.bullet-list li {
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #e5e5e5;
+}
+
+.bullet-list li::before {
+    content: '✦';
+    position: absolute;
+    left: 5px;
+    top: 0;
+    color: #df9232;
+    font-size: 18px;
+}
+
+/* --- Cartão Perfil / Autor (Layout com foto ajustada) --- */
+.profile-container {
+    background-color: #161a1d;
+    border-radius: 8px;
+    padding: 40px;
+    border-left: 4px solid #df9232;
+    max-width: 850px;
+    margin: 0 auto;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.profile-photo-area {
+    flex: 0 0 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #df9232;
+    background-color: #0b090a;
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-info-area {
+    flex: 1;
+}
+
+.profile-title {
+    font-size: 22px;
+    color: #f5f3f4;
+    margin-bottom: 15px;
+}
+
+.profile-text {
+    color: #b1a7a6;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* --- Bloco Unificado de Oferta --- */
+.offer-card {
+    background: linear-gradient(145deg, #161a1d 0%, #0b090a 100%);
+    border: 2px solid #df9232;
+    border-radius: 12px;
+    padding: 50px 30px;
+    text-align: center;
+    max-width: 550px;
+    margin: 40px auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.offer-badge {
+    background-color: #df9232;
+    color: #050505;
+    padding: 6px 16px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.offer-text {
+    font-size: 16px;
+    color: #b1a7a6;
+    margin-bottom: 10px;
+}
+
+.price-large {
+    font-size: 56px;
+    font-weight: 800;
+    color: #f5f3f4;
+    margin: 15px 0;
+    letter-spacing: -1px;
+}
+
+.price-currency {
+    font-size: 24px;
+    font-weight: 400;
+    vertical-align: super;
+    margin-right: 5px;
+}
+
+.offer-guarantee {
+    margin-top: 25px;
+    font-size: 14px;
+    color: #df9232;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-weight: bold;
+}
+
+/* --- FAQ Interativo (Acordeão) --- */
+.faq-container {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background-color: #161a1d;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+}
+
+.faq-item.active {
+    background-color: #1d2125;
+}
+
+.faq-question {
+    font-weight: bold;
+    font-size: 16px;
+    color: #f5f3f4;
+    position: relative;
+    padding: 20px 50px 20px 20px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.faq-question::after {
+    content: '＋';
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #df9232;
+    font-size: 18px;
+    transition: transform 0.3s ease, content 0.3s ease;
+}
+
+.faq-item.active .faq-question::after {
+    content: '－';
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.faq-answer p {
+    padding: 0 20px 20px 20px;
+    color: #b1a7a6;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* --- Rodapé Final --- */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    color: #555;
+    font-size: 12px;
+    background-color: #050505;
+}
+
+/* --- Regras e Estados das Animações Dinâmicas --- */
+.scroll-animate {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.scroll-animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes fadeInUpHeader {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- Responsividade Básica para Telas Menores (Mobile) --- */
+@media (max-width: 600px) {
+    .profile-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+    }
+    .profile-photo-area {
+        flex: 0 0 160px;
+        height: 160px;
+    }
+
+    /* --- Novo Bloco: Imagem de Destaque no Topo --- */
+.hero-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.hero-image {
+    max-width: 180px; /* Altere este tamanho se quiser a imagem maior ou menor */
+    width: 100%;
+    height: auto;
+    border-radius: 50%; /* Remove esta linha caso a imagem de topo seja retangular ou quadrada */
+    border: 3px solid #df9232; /* Borda dourada combinando com a identidade visual */
+    object-fit: cover;
+    box-shadow: 0 8px 25px rgba(223, 146, 50, 0.2);
+}
+}
+/* --- Header / Hero Reestruturado --- */
+header {
+    padding: 60px 20px;
+    background: linear-gradient(180deg, #161a1d 0%, #0b090a 100%);
+    border-bottom: 2px solid #df9232;
+}
+
+/* Flexbox estrutural para manter lado a lado no Desktop */
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.hero-text-side {
+    flex: 1;
+    text-align: left; /* Alinhamento elegante à esquerda no desktop */
+}
+
+.hero-image-side {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.author-tag {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #df9232;
+    font-weight: bold;
+    margin-bottom: 12px;
+    display: block;
+}
+
+h1 {
+    font-size: 40px;
+    color: #f5f3f4;
+    margin-bottom: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.highlight {
+    color: #df9232;
+}
+
+.subtitle {
+    font-size: 17px;
+    color: #b1a7a6;
+    margin-bottom: 30px;
+    max-width: 520px;
+}
+
+/* --- Imagem do Topo Formatada --- */
+.hero-banner {
+    width: 100%;
+    max-width: 380px; /* Tamanho proporcional para o mockup/imagem do livro */
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Cantos levemente arredondados profissionais */
+    box-shadow: 0 12px 35px rgba(223, 146, 50, 0.15);
+    object-fit: cover;
+}
+
+/* --- Restante dos estilos do corpo (Mantenha igual)... --- */
+
+/* --- ADICIONAR NO FINAL DO ARQUIVO PARA RESPONSIVIDADE (MOBILE) --- */
+@media (max-width: 768px) {
+    header {
+        padding: 40px 15px;
+    }
+    
+    /* Inverte a ordem no mobile para a imagem ficar no TOPO antes do texto */
+    .hero-container {
+        flex-direction: column-reverse; 
+        text-align: center;
+        gap: 25px;
+    }
+
+    .hero-text-side {
+        text-align: center;
+    }
+
+    .subtitle {
+        margin: 0 auto 25px auto;
+    }
+
+    .hero-banner {
+        max-width: 280px; /* Reduz ligeiramente a imagem em telemóveis */
+    }
+
+    /* Ajuste da foto biográfica no mobile */
+    .profile-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+    }
+    .profile-photo-area {
+        flex: 0 0 160px;
+        height: 160px;
+    }
+}
+/* --- Header / Hero Reestruturado com Imagem de Fundo (10% Opacidade) --- */
+header {
+    padding: 60px 20px;
+    background-color: #0b090a; /* Fundo base escuro */
+    border-bottom: 2px solid #df9232;
+    position: relative; /* Necessário para posicionar o fundo */
+    overflow: hidden;
+}
+
+/* Camada da imagem de fundo com opacidade isolada */
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Substitua o caminho abaixo pela sua imagem de fundo (ex: textura mística, padrão de cartas, etc.) */
+    background-image: url('img/whatsapp-image-2023-10-10-at-10.30.45.jpeg'); /* Exemplo de imagem de fundo */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.10; /* Ajuste exato em 10% */
+    z-index: 1; /* Fica atrás de todo o conteúdo */
+}
+
+/* Flexbox estrutural para manter lado a lado no Desktop */
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    position: relative;
+    z-index: 2; /* Garante que o conteúdo fique por cima da imagem de fundo */
+}
+
+.hero-text-side {
+    flex: 1;
+    text-align: left;
+}
+
+.hero-image-side {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.author-tag {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #df9232;
+    font-weight: bold;
+    margin-bottom: 12px;
+    display: block;
+}
+
+h1 {
+    font-size: 40px;
+    color: #f5f3f4;
+    margin-bottom: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.highlight {
+    color: #df9232;
+}
+
+.subtitle {
+    font-size: 17px;
+    color: #b1a7a6;
+    margin-bottom: 30px;
+    max-width: 520px;
+}
+
+/* --- Imagem do Topo Formatada (Mockup/Livro) --- */
+.hero-banner {
+    width: 100%;
+    max-width: 380px;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 12px 35px rgba(223, 146, 50, 0.15);
+    object-fit: cover;
+}
